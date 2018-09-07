@@ -7,20 +7,20 @@
 	<title>Survey Client</title>
 </head>
 <body>
-	<form action="<?=base_url('survey/clients');?>" method="post" autocomplete="off">
+	<form method="post" autocomplete="off">
 		<!-- Get from parameter which sent from url -->
 		<label for="" class="">Client company</label><br>
-		<input type="text" name="client_company" value="<?php echo $this->uri->segment(2);?>" readonly><br>
+		<input type="text" name="client_company" id="client_company" value="<?php echo $this->uri->segment(2);?>" readonly><br>
 
 		<label for="" class="">Client contact</label><br>
-		<input type="text" name="client_contact" placeholder="fill your contact please" required><br>
+		<input type="text" name="client_contact" id="client_contact" placeholder="fill your contact please" required><br>
 		
 		<!-- Get from parameter which sent from url -->
 		<label for="">Nature of Work</label><br>
-		<input type="text" name="nature_of_work" value="<?php echo $this->uri->segment(3);?>" readonly><br>
+		<input type="text" name="nature_of_work" id="nature_of_work" value="<?php echo $this->uri->segment(3);?>" readonly><br>
 
 		<label for="" class="">Taxand countries involved</label><br>
-		<input type="text" name="taxand_countries_involved" placeholder="taxand countries involved please" required><br>
+		<input type="text" name="taxand_countries_involved" id="taxand_countries_involved" placeholder="taxand countries involved please" required><br>
 
 		<br>
 		<table class="" border=1>
@@ -44,19 +44,19 @@
 						your priorities.
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp1" value="Strongly disagree" required>
+						<input type="radio" name="ttp1" id="ttp1" value="Strongly disagree" required>
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp1" value="Disagree">
+						<input type="radio" name="ttp1" id="ttp1" value="Disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp1" value="Neither agree or disagree">
+						<input type="radio" name="ttp1" id="ttp1" value="Neither agree or disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp1" value="Agree">
+						<input type="radio" name="ttp1" id="ttp1" value="Agree">
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp1" value="Strongly agree">
+						<input type="radio" name="ttp1" id="ttp1" value="Strongly agree">
 					</td>
 				</tr>
 				<tr>
@@ -66,19 +66,19 @@
 						tax solutions for you.
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp2" value="Strongly disagree" required>
+						<input type="radio" name="ttp2" id="ttp2" value="Strongly disagree" required>
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp2" value="Disagree">
+						<input type="radio" name="ttp2" id="ttp2" value="Disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp2" value="Neither agree or disagree">
+						<input type="radio" name="ttp2" id="ttp2" value="Neither agree or disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp2" value="Agree">
+						<input type="radio" name="ttp2" id="ttp2" value="Agree">
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp2" value="Strongly agree">
+						<input type="radio" name="ttp2" id="ttp2" value="Strongly agree">
 					</td>
 				</tr>
 				<tr>
@@ -87,19 +87,19 @@
 						depth.
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp3" value="Strongly disagree" required>
+						<input type="radio" name="ttp3" id="ttp3" value="Strongly disagree" required>
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp3" value="Disagree">
+						<input type="radio" name="ttp3" id="ttp3" value="Disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp3" value="Neither agree or disagree">
+						<input type="radio" name="ttp3" id="ttp3" value="Neither agree or disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp3" value="Agree">
+						<input type="radio" name="ttp3" id="ttp3" value="Agree">
 					</td>
 					<td align="center">
-						<input type="radio" name="ttp3" value="Strongly agree">
+						<input type="radio" name="ttp3" id="ttp3" value="Strongly agree">
 					</td>
 				</tr>
 				<tr>
@@ -388,7 +388,55 @@
 			</tbody>
 		</table>
 
-		<button type="submit" name="save">Save</button>
+		<button type="button" type="submit" id="btn_save" name="save">Save</button>
 	</form>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			//Store Survey
+			$('#btn_save').on('click', function(){
+
+				//Deklarasi dan inisiasi form ke javascript
+				var client_company				= $('#client_company').val();
+				var client_contact				= $('#client_contact').val();
+				var nature_of_work				= $('#nature_of_work').val();
+				var taxand_countries_involved	= $('#taxand_countries_involved').val();
+				var ttp1						= $('#ttp1').val();
+				var ttp2						= $('#ttp2').val();
+				var ttp3						= $('#ttp3').val();
+
+
+				//Proses ajax
+				$.ajax({
+					type : "POST",
+					url  : "<?php echo site_url('store')?>",
+					dataType : "JSON",
+					data : {
+						client_company:client_company, 
+						client_contact:client_contact, 
+						nature_of_work:nature_of_work,
+						taxand_countries_involved:taxand_countries_involved,
+						ttp1:ttp1,
+						ttp2:ttp2,
+						ttp3:ttp3
+					},
+					success: function(data){//Kalau data survey berhasil di simpan
+						$('[name="client_company"]').val("");
+						$('[name="client_contact"]').val("");
+						$('[name="nature_of_work"]').val("");
+						$('[name="taxand_countries_involved"]').val("");
+						$('[name="ttp1"]').val("");
+						$('[name="ttp2"]').val("");
+						$('[name="ttp3"]').val("");
+						// console.log("Berhasil disimpan");
+					}
+				});
+
+				return false;
+			});
+		});
+	</script>
 </body>
 </html>
