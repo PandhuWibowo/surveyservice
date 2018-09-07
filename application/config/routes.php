@@ -57,5 +57,6 @@ $route['translate_uri_dashes'] 			= FALSE;
 
 $route['survey/(:any)/(:any)']['GET']	= 'survey/pbtaxand_survey/$1/$2';
 $route['store']							= 'survey/mm_store';
-
+$route['dashboard/admin']['GET']		= 'main/backend/index';
+$route['report']['GET']					= 'main/backend/mm_report_page';
 
