@@ -107,7 +107,7 @@
 						<label for="">Any comments?</label>
 					</td>
 					<td colspan="5">
-						<input type="text" name="comments_ttp" required>
+						<input type="text" name="comments_ttp" required id="comments_ttp">
 					</td>
 				</tr>
 			</tbody>
@@ -131,19 +131,19 @@
 						regularly communicated.
 					</td>
 					<td align="center">
-						<input type="radio" name="pm1" required value="Strongly disagree">
+						<input type="radio" name="pm1" id="pm1" required value="Strongly disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="pm1" value="Disagree">
+						<input type="radio" name="pm1" id="pm1" value="Disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="pm1" value="Neither agree or disagree">
+						<input type="radio" name="pm1" id="pm1" value="Neither agree or disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="pm1" value="Agree">
+						<input type="radio" name="pm1" id="pm1" value="Agree">
 					</td>
 					<td align="center">
-						<input type="radio" name="pm1" value="Strongly agree">
+						<input type="radio" name="pm1" id="pm1" value="Strongly agree">
 					</td>
 				</tr>
 				<tr>
@@ -154,19 +154,19 @@
 						complexity.
 					</td>
 					<td align="center">
-						<input type="radio" name="pm2" required value="Strongly disagree">
+						<input type="radio" name="pm2" id="pm2" required value="Strongly disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="pm2" value="Disagree">
+						<input type="radio" name="pm2" id="pm2" value="Disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="pm2" value="Neither agree or disagree">
+						<input type="radio" name="pm2" id="pm2" value="Neither agree or disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="pm2" value="Agree">
+						<input type="radio" name="pm2" id="pm2" value="Agree">
 					</td>
 					<td align="center">
-						<input type="radio" name="pm2" value="Strongly agree">
+						<input type="radio" name="pm2" id="pm2" value="Strongly agree">
 					</td>
 				</tr>
 				<tr>
@@ -174,7 +174,7 @@
 						<label for="">Any comments?</label>
 					</td>
 					<td colspan="5">
-						<input type="text" name="comments_pm" required>
+						<input type="text" name="comments_pm" id="comments_pm" required>
 					</td>
 				</tr>
 			</tbody>
@@ -201,19 +201,19 @@
 						delivered.
 					</td>
 					<td align="center">
-						<input type="radio" name="fb1" value="Strongly disagree" required>
+						<input type="radio" name="fb1" id="fb1" value="Strongly disagree" required>
 					</td>
 					<td align="center">
-						<input type="radio" name="fb1" value="Disagree">
+						<input type="radio" name="fb1" id="fb1" value="Disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="fb1" value="Neither agree or disagree">
+						<input type="radio" name="fb1" id="fb1" value="Neither agree or disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="fb1" value="Agree">
+						<input type="radio" name="fb1" id="fb1" value="Agree">
 					</td>
 					<td align="center">
-						<input type="radio" name="fb1" value="Strongly agree">
+						<input type="radio" name="fb1" id="fb1" value="Strongly agree">
 					</td>
 				</tr>
 				<tr>
@@ -223,19 +223,19 @@
 						and met expectations.
 					</td>
 					<td align="center">
-						<input type="radio" name="fb2" value="Strongly disagree" required>
+						<input type="radio" name="fb2" id="fb2" value="Strongly disagree" required>
 					</td>
 					<td align="center">
-						<input type="radio" name="fb2" value="Disagree">
+						<input type="radio" name="fb2" id="fb2" value="Disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="fb2" value="Neither agree or disagree">
+						<input type="radio" name="fb2" id="fb2" value="Neither agree or disagree">
 					</td>
 					<td align="center">
-						<input type="radio" name="fb2" value="Agree">
+						<input type="radio" name="fb2" id="fb2" value="Agree">
 					</td>
 					<td align="center">
-						<input type="radio" name="fb2" value="Strongly agree">
+						<input type="radio" name="fb2" id="fb2" value="Strongly agree">
 					</td>
 				</tr>
 				<tr>
@@ -243,7 +243,7 @@
 						<label for="">Any comments?</label>
 					</td>
 					<td colspan="5">
-						<input type="text" name="comments_fb" required>
+						<input type="text" name="comments_fb" id="comments_fb" required>
 					</td>
 				</tr>
 				<tr>
@@ -256,7 +256,7 @@
 						</label>
 					</td>
 					<td colspan="5">
-						<input type="text" name="comments_fbops">
+						<input type="text" name="comments_fbops" required id="comments_fbops">
 					</td>
 				</tr>
 			</tbody>
@@ -283,19 +283,19 @@
 						the service?
 					</td>
 					<td align="center">
-						<input type="radio" name="oi1" value="Weak" required>
+						<input type="radio" name="oi1" value="Weak" id="oi1" required>
 					</td>
 					<td align="center">
-						<input type="radio" name="oi1" value="Average">
+						<input type="radio" name="oi1" id="oi1" value="Average">
 					</td>
 					<td align="center">
-						<input type="radio" name="oi1" value="Good">
+						<input type="radio" name="oi1" id="oi1" value="Good">
 					</td>
 					<td align="center">
-						<input type="radio" name="oi1" value="Very Good">
+						<input type="radio" name="oi1" id="oi1" value="Very Good">
 					</td>
 					<td align="center">
-						<input type="radio" name="oi1" value="Excellent">
+						<input type="radio" name="oi1" id="oi1" value="Excellent">
 					</td>
 				</tr>
 				<tr>
@@ -303,7 +303,7 @@
 						<label for="">Any comments?</label>
 					</td>
 					<td colspan="5">
-						<input type="text" name="comments_oi" required>
+						<input type="text" name="comments_oi" id="comments_oi" required>
 					</td>
 				</tr>
 			</body>
@@ -326,19 +326,19 @@
 						Taxand network again?
 					</td>
 					<td align="center">
-						<input type="radio" name="oi2" required value="No">
+						<input type="radio" name="oi2" id="oi2" required value="No">
 					</td>
 					<td align="center">
-						<input type="radio" name="oi2" value="Unlikely">
+						<input type="radio" name="oi2" id="oi2" value="Unlikely">
 					</td>
 					<td align="center">
-						<input type="radio" name="oi2" value="Maybe">
+						<input type="radio" name="oi2" id="oi2" value="Maybe">
 					</td>
 					<td align="center">
-						<input type="radio" name="oi2" value="Probably">
+						<input type="radio" name="oi2" id="oi2" value="Probably">
 					</td>
 					<td align="center">
-						<input type="radio" name="oi2" value="Definitely">
+						<input type="radio" name="oi2" id="oi2" value="Definitely">
 					</td>
 				</tr>
 				<tr>
@@ -346,7 +346,7 @@
 						<label for="">Any comments?</label>
 					</td>
 					<td colspan="5">
-						<input type="text" name="comments_oi2" required>
+						<input type="text" name="comments_oi2" id="comments_oi2" required>
 					</td>
 				</tr>
 				
@@ -368,7 +368,7 @@
 						</label>
 					</td>
 					<td colspan="5">
-						<input type="text" name="comments_ft" required>
+						<input type="text" name="comments_ft" id="comments_ft" required>
 					</td>
 				</tr>
 				<tr>
@@ -381,7 +381,7 @@
 						</label>
 					</td>
 					<td colspan="5">
-						<input type="text" name="comments_ft2" required>
+						<input type="text" name="comments_ft2" id="comments_ft2" required>
 					</td>
 				</tr>
 				
@@ -406,7 +406,20 @@
 				var ttp1						= $('#ttp1').val();
 				var ttp2						= $('#ttp2').val();
 				var ttp3						= $('#ttp3').val();
-
+				var comments_ttp				= $('#comments_ttp').val();
+				var pm1							= $('#pm1').val();
+				var pm2							= $('#pm2').val();
+				var comments_pm					= $('#comments_pm').val();
+				var fb1							= $('#fb1').val();
+				var fb2							= $('#fb2').val();
+				var comments_fb					= $('#comments_fb').val();
+				var comments_fbops				= $('#comments_fbops').val();
+				var oi1							= $('#oi1').val();
+				var comments_oi					= $('#comments_oi').val();
+				var oi2							= $('#oi2').val();
+				var comments_oi2				= $('#comments_oi2').val();
+				var comments_ft					= $('#comments_ft').val();
+				var comments_ft2				= $('#comments_ft2').val();
 
 				//Proses ajax
 				$.ajax({
@@ -420,16 +433,45 @@
 						taxand_countries_involved:taxand_countries_involved,
 						ttp1:ttp1,
 						ttp2:ttp2,
-						ttp3:ttp3
+						ttp3:ttp3,
+						comments_ttp:comments_ttp,
+						pm1:pm1,
+						pm2:pm2,
+						comments_pm:comments_pm,
+						fb1:fb1,
+						fb2:fb2,
+						comments_fb:comments_fb,
+						comments_fbops:comments_fbops,
+						oi1:oi1,
+						comments_oi:comments_oi,
+						oi2:oi2,
+						comments_oi2:comments_oi2,
+						comments_ft:comments_ft,
+						comments_ft2:comments_ft2
 					},
 					success: function(data){//Kalau data survey berhasil di simpan
 						$('[name="client_company"]').val("");
 						$('[name="client_contact"]').val("");
 						$('[name="nature_of_work"]').val("");
 						$('[name="taxand_countries_involved"]').val("");
-						$('[name="ttp1"]').val("");
-						$('[name="ttp2"]').val("");
-						$('[name="ttp3"]').val("");
+						$('[name="ttp1"]').prop('checked',false);
+						$('[name="ttp2"]').prop('checked',false);
+						$('[name="ttp3"]').prop('checked',false);
+						$('[name="comments_ttp"]').val("");
+						$('[name="pm1"]').prop('checked',false);
+						$('[name="pm2"]').prop('checked',false);
+						$('[name="comments_pm"]').val("");
+						$('[name="fb1"]').prop('checked',false);
+						$('[name="fb2"]').prop('checked',false);
+						$('[name="comments_fb"]').val("");
+						$('[name="comments_fbops"]').val("");
+						$('[name="oi1"]').prop('checked',false);
+						$('[name="comments_oi"]').val("");
+						$('[name="oi2"]').prop('checked',false);
+						$('[name="comments_oi2"]').val("");
+						$('[name="comments_ft"]').val("");
+						$('[name="comments_ft2"]').val("");
+						
 						// console.log("Berhasil disimpan");
 					}
 				});
