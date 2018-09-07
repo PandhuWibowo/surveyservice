@@ -7,7 +7,7 @@ class Survey extends CI_Controller {
 	{
 		// $this->load->view('survey/index');
 		echo "Url ini kosong, silahkan copy paste url custom di bawah ini<br>";
-		echo "http://localhost/Kerjaan/pbtaxand/survey/nama_client/nama_servis";
+		echo "http://localhost/Kerjaan/survey/nama_client/nama_servis";
 	}
 
 	public function pbtaxand_survey($param1, $param2){
