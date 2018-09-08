@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 08, 2018 at 11:13 AM
+-- Generation Time: Sep 08, 2018 at 05:39 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -81,8 +81,7 @@ CREATE TABLE `survey_client` (
 --
 
 INSERT INTO `survey_client` (`id_perusahaan`, `client_company`, `client_contact`, `nature_of_work`, `taxand_countries_involved`, `ttp1`, `ttp2`, `ttp3`, `comments_ttp`, `pm1`, `pm2`, `comments_pm`, `fb1`, `fb2`, `comments_fb`, `comments_fbops`, `oi1`, `comments_oi`, `oi2`, `comments_oi2`, `comments_ft`, `comments_ft2`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(8, 'pt', 'sadfasdf', 'pt', 'dsfsadfsd', 'Strongly disagree', 'Strongly disagree', 'Strongly disagree', 'asdfasdf', 'Strongly disagree', 'Strongly disagree', 'sfdgfdsg', 'Strongly disagree', 'Strongly disagree', 'dfgsdfg', 'fdgsdfg', 'Weak', 'dfsgsdfgds', 'No', 'fdsgsdfg', 'fdgsdf', 'fdgsdfg', '2018-09-07 07:18:27', NULL, NULL),
-(9, 'fasdfasdf', 'adsfasdf', 'asdfasdf', 'asdfasdfasdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-09-07 09:51:20', NULL, NULL);
+(17, 'pt', 'ksdfgosj', 'pt', 'ldsfnsfd', 'Strongly disagree', 'Strongly disagree', 'Strongly disagree', 'sdfksadf', 'Strongly disagree', 'Strongly disagree', 'sdfsdfs', 'Strongly disagree', 'Strongly disagree', 'sdfsdf', 'dsfsdf', 'Weak', 'sdfsdffs', 'No', 'sdfgsdf', 'sdfasdf', 'sdafadfs', '2018-09-08 15:33:40', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -114,7 +113,7 @@ ALTER TABLE `administrator`
 -- AUTO_INCREMENT for table `survey_client`
 --
 ALTER TABLE `survey_client`
-  MODIFY `id_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -52,11 +52,11 @@
 					m_show_survey();
 					function m_show_survey(){
 						$.ajax({
-							type		: "ajax",
+							type		: "post",//Perhatikan typenya
 							url			: '<?php echo base_url("dashboard/report/per/periode");?>',
 							async		: true,
 							data		: {
-								start_of_date	:start_of_date,
+								start_of_date	: start_of_date,
 								end_of_date		: end_of_date
 							},
 							dataType 	: 'json',
