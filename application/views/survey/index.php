@@ -13,7 +13,7 @@
 		<input type="text" name="client_company" id="client_company" value="<?php echo $this->uri->segment(2);?>" readonly><br>
 
 		<label for="" class="">Client contact</label><br>
-		<input type="text" name="client_contact" id="client_contact" placeholder="fill your contact please" required><br>
+		<input type="text" name="client_contact" maxlength="15" id="client_contact" placeholder="fill your contact please" required><br>
 		
 		<!-- Get from parameter which sent from url -->
 		<label for="">Nature of Work</label><br>
