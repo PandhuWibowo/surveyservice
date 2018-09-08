@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 07, 2018 at 05:29 AM
+-- Generation Time: Sep 08, 2018 at 11:13 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_pbtaxand`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `administrator`
+--
+
+CREATE TABLE `administrator` (
+  `id` int(11) NOT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `nama` varchar(100) DEFAULT NULL,
+  `password` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `administrator`
+--
+
+INSERT INTO `administrator` (`id`, `username`, `nama`, `password`) VALUES
+(1, 'pandhu', 'Pandhu Wibowo', 'diajarin');
 
 -- --------------------------------------------------------
 
@@ -50,12 +70,29 @@ CREATE TABLE `survey_client` (
   `oi2` enum('No','Unlikely','Maybe','Probably','Definitely') DEFAULT NULL,
   `comments_oi2` text,
   `comments_ft` text,
-  `comments_ft2` text
+  `comments_ft2` text,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `survey_client`
+--
+
+INSERT INTO `survey_client` (`id_perusahaan`, `client_company`, `client_contact`, `nature_of_work`, `taxand_countries_involved`, `ttp1`, `ttp2`, `ttp3`, `comments_ttp`, `pm1`, `pm2`, `comments_pm`, `fb1`, `fb2`, `comments_fb`, `comments_fbops`, `oi1`, `comments_oi`, `oi2`, `comments_oi2`, `comments_ft`, `comments_ft2`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(8, 'pt', 'sadfasdf', 'pt', 'dsfsadfsd', 'Strongly disagree', 'Strongly disagree', 'Strongly disagree', 'asdfasdf', 'Strongly disagree', 'Strongly disagree', 'sfdgfdsg', 'Strongly disagree', 'Strongly disagree', 'dfgsdfg', 'fdgsdfg', 'Weak', 'dfsgsdfgds', 'No', 'fdsgsdfg', 'fdgsdf', 'fdgsdfg', '2018-09-07 07:18:27', NULL, NULL),
+(9, 'fasdfasdf', 'adsfasdf', 'asdfasdf', 'asdfasdfasdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-09-07 09:51:20', NULL, NULL);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `administrator`
+--
+ALTER TABLE `administrator`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `survey_client`
@@ -68,10 +105,16 @@ ALTER TABLE `survey_client`
 --
 
 --
+-- AUTO_INCREMENT for table `administrator`
+--
+ALTER TABLE `administrator`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `survey_client`
 --
 ALTER TABLE `survey_client`
-  MODIFY `id_perusahaan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
