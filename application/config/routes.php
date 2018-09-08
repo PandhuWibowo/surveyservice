@@ -63,3 +63,4 @@ $route['dashboard/admin/report']['GET']	= 'main/backend/mm_report_page';
 $route['chart']['GET']					= 'main/backend/mm_report_periode';
 $route['admin/signin/auth']['GET']		= 'main/login/index';
 $route['admin/auth/process']			= 'main/login/mm_check_login';
+$route['dashboard/report/per/periode']	= 'main/backend/mm_result_show';

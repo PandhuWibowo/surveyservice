@@ -17,7 +17,15 @@ class Backend extends CI_Controller {
 	//Report page
 	public function mm_report_page(){
 		$data['title']		= "Report Survey";
+		// $data['looping'] = $this->rm->mm_get_all();
 		$this->load->view('admin/main/report_survey', $data);
+	}
+
+	//Result survey
+	public function mm_result_show(){
+		$data = $this->rm->mm_get_all();
+		// $this->load->view('admin/main/report_survey', $data);
+		echo json_encode($data);
 	}
 
 	
