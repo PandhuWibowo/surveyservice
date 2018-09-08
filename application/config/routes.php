@@ -59,4 +59,6 @@ $route['survey/(:any)/(:any)']['GET']	= 'survey/pbtaxand_survey/$1/$2';
 $route['store']							= 'survey/mm_store';
 $route['dashboard/admin']['GET']		= 'main/backend/index';
 $route['report']['GET']					= 'main/backend/mm_report_page';
-
+$route['chart']['GET']					= 'main/backend/mm_report_periode';
+$route['admin/signin/auth']['GET']		= 'main/login/index';
+$route['admin/auth/process']			= 'main/login/mm_check_login';

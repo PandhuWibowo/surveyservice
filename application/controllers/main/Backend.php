@@ -5,13 +5,14 @@ class Backend extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 
-		// $this->load->model('surveymodel','sm');
+		$this->load->model('reportmodel','rm');
+		$this->load->helper('string'); 
 	}
 
 	//Dashboard welcome page
 	public function index(){
-		$data['title']		= "Dashboard Admin";
-		$this->load->view('admin/main/index', $data);
+		$data['title']		= "Dashboard Administrator";
+		$this->load->view('admin/dashboard/index', $data);
 	}
 
 	//Report page
@@ -20,6 +21,6 @@ class Backend extends CI_Controller {
 		$this->load->view('admin/main/report_survey', $data);
 	}
 
-	
+	 
 
 }
