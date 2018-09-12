@@ -11,8 +11,8 @@
 	<form action="" method="post">
 		<input type="date" name="start_of_date" id="start_of_date" />
 		<input type="date" name="end_of_date" id="end_of_date" />
-	
-		<button type="button" id="btn_cek">Cek</button>
+		<!-- <input type="button" value="Cek" id="btn_cek" disabled="true"> -->
+		<button type="button" id="btn_cek" disabled="true">Cek</button>
 	</form>
 
 	<p id="show_of_date"></p>
@@ -29,15 +29,28 @@
 		<tbody id="show_data">
 			
 		</tbody>
-		<?php
-				// foreach($looping as $loopdata){
-				// 	echo $loopdata->client_company.'<br>';
-				// 	echo $loopdata->client_contact.'<br>';
-				// }
-			?>
 	</table>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
+		
+		//Check disabled button submit
+		function doCheck(){
+				var allFilled = true;
+				$('input[type=date]').each(function(){
+					if($(this).val() == ''){
+						allFilled = false;
+						return false;
+					}
+				});
+				$('button[type=button]').prop('disabled', !allFilled);
+		}
+
+		$(document).ready(function(){
+			$('input[type=date]').keyup(doCheck).focusout(doCheck);
+		});
+
+
+		//Starting process into backend data
 		$(document).ready(function(){
 			$('#btn_cek').on('click', function(){
 				//Deklarasi dan inisiasi nilai
@@ -46,7 +59,7 @@
 				
 				//Condition
 				if(start_of_date == "" && end_of_date == ""){
-					document.getElementById('show_of_date').innerHTML = "Still empty";
+					document.getElementById('show_of_date').innerHTML = "Still empty, select date in the text box please!";
 				}else{
 					document.getElementById('show_of_date').innerHTML = start_of_date + ' s/d ' + end_of_date;
 					m_show_survey();

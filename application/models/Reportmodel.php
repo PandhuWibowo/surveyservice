@@ -15,6 +15,10 @@ class Reportmodel extends CI_Model {
 		// return $this->db->get('survey_client')->result();
 	}
 
+	public function get_all_value(){
+		$value			= $this->input->post('check');
+		return $this->db->query("select (select count(ttp1) from survey_client where ttp1 = '$value') as ttp1, (select count(ttp1) from survey_client where ttp2 = '$value') as ttp2, (select count(ttp1) from survey_client where ttp3 = '$value') as ttp3 from survey_client")->result();
+	}
 	// Charts (End)
 	
 }

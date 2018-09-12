@@ -33,6 +33,11 @@ class Backend extends CI_Controller {
 		echo json_encode($data);
 	}
 
+	public function mm_result_show2(){
+		$data = $this->rm->get_all_value();
+		echo json_encode($data);
+	}
+
 	
 
 	 
