@@ -56,11 +56,21 @@ $route['404_override'] 					= '';
 $route['translate_uri_dashes'] 			= FALSE;
 
 //Customize URI
-$route['survey/(:any)/(:any)']['GET']	= 'survey/pbtaxand_survey/$1/$2';
-$route['store']							= 'survey/mm_store';
-$route['dashboard/admin']['GET']		= 'main/backend/index';
-$route['dashboard/admin/report']['GET']	= 'main/backend/mm_report_page';
-$route['chart']['GET']					= 'main/backend/mm_report_periode';
-$route['admin/signin/auth']['GET']		= 'main/login/index';
-$route['admin/auth/process']			= 'main/login/mm_check_login';
-$route['dashboard/report/per/periode']	= 'main/backend/mm_result_show';
+$route['survey/(:any)/(:any)']['GET']		= 'survey/pbtaxand_survey/$1/$2';
+$route['store']								= 'survey/mm_store';
+$route['dashboard/admin']['GET']			= 'main/backend/index';
+
+//Routing file report (page)
+$route['dashboard/admin/report']['GET']		= 'main/backend/mm_report_page';
+$route['dashboard/admin/report2']['GET']	= 'main/backend/mm_report_page2';
+
+
+$route['chart']['GET']						= 'main/backend/mm_report_periode';
+
+//Sign In page and proces login page
+$route['admin/signin/auth']['GET']			= 'main/login/index';
+$route['admin/auth/process']				= 'main/login/mm_check_login';
+
+//Proses report per period
+$route['dashboard/report/per/periode']		= 'main/backend/mm_result_show';
+$route['dashboard/report/value']			= 'main/backend/mm_result_show2'; //On Process

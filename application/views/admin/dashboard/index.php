@@ -10,6 +10,7 @@
 	halo, ini admin <?php echo $this->session->userdata('nama');?><br>
 
 	<a href="<?=base_url('dashboard/admin/report');?>">Report</a>
+	<a href="<?=base_url('dashboard/admin/report2');?>">Report 2</a>
 	
 	<br>
 	<a href="#">Sign Out</a>

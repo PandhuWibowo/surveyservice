@@ -21,6 +21,11 @@ class Backend extends CI_Controller {
 		$this->load->view('admin/main/report_survey', $data);
 	}
 
+	public function mm_report_page2(){
+		$data['title'] = "Report Survey 2";
+		$this->load->view('admin/main/report_survey2', $data);
+	}
+
 	//Result survey
 	public function mm_result_show(){
 		$data = $this->rm->mm_get_all();
